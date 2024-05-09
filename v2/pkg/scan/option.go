@@ -10,6 +10,7 @@ import (
 type Options struct {
 	Timeout       time.Duration
 	Retries       int
+	Threads       int
 	Rate          int
 	PortThreshold int
 	ExcludeCdn    bool
