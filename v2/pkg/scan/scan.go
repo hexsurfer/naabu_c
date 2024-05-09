@@ -77,6 +77,7 @@ type Scanner struct {
 	SourceIP4     net.IP
 	SourceIP6     net.IP
 	retries       int
+	threads       int
 	rate          int
 	portThreshold int
 	timeout       time.Duration
@@ -122,7 +123,6 @@ func NewScanner(options *Options) (*Scanner, error) {
 	if err != nil {
 		return nil, err
 	}
-
 	var nPolicyOptions networkpolicy.Options
 	nPolicyOptions.DenyList = append(nPolicyOptions.DenyList, options.ExcludedIps...)
 	nPolicy, err := networkpolicy.New(nPolicyOptions)
@@ -134,6 +134,7 @@ func NewScanner(options *Options) (*Scanner, error) {
 	scanner := &Scanner{
 		timeout:       options.Timeout,
 		retries:       options.Retries,
+		threads:       options.Threads,
 		rate:          options.Rate,
 		portThreshold: options.PortThreshold,
 		tcpsequencer:  NewTCPSequencer(),
