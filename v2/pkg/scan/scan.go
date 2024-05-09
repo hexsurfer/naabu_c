@@ -11,13 +11,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/projectdiscovery/cdncheck"
-	"github.com/projectdiscovery/gologger"
-	"github.com/projectdiscovery/ipranger"
-	"github.com/projectdiscovery/naabu/v2/pkg/port"
-	"github.com/projectdiscovery/naabu/v2/pkg/protocol"
-	"github.com/projectdiscovery/naabu/v2/pkg/result"
-	"github.com/projectdiscovery/networkpolicy"
+	"github.com/hexsurfer/cdncheck"
+	"github.com/hexsurfer/gologger"
+	"github.com/hexsurfer/ipranger"
+	"github.com/hexsurfer/naabu/v2/pkg/port"
+	"github.com/hexsurfer/naabu/v2/pkg/protocol"
+	"github.com/hexsurfer/naabu/v2/pkg/result"
+	"github.com/hexsurfer/networkpolicy"
 	"golang.org/x/net/proxy"
 )
 
